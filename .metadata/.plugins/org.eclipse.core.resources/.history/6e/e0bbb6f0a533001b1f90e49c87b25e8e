@@ -1,0 +1,5 @@
+package com.bloodbank.dto;
+
+public class LoginResponseDto {
+
+}

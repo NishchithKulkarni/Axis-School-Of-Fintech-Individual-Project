@@ -1,0 +1,28 @@
+package com.bloodbank.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bloodbank.model.BloodStorageBean;
+import com.bloodbank.model.DonorBean;
+import com.bloodbank.model.RequestBean;
+
+public class LoginClassController {
+	
+	@Autowired
+	private LoginService loginService;
+	
+	public List<RequestBean> listOfRequests() {
+		return loginService.getRequests();
+	}
+	
+	public List<DonorBean> listOfDonors() {
+		return loginService.getDonors();
+	}
+	
+	public List<BloodStorageBean> listOfBloodBanks(){
+		return loginService.getBloodBanks();
+	}
+	
+}

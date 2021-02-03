@@ -1,0 +1,13 @@
+package com.bloodbank.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.bloodbank.model.AdminBean;
+
+@Repository
+public interface AdminDao extends JpaRepository<AdminBean, String>{
+	
+	AdminBean findByAdminIdAndAdminPassword(String admin_id,String admin_password);
+
+}

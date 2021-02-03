@@ -1,0 +1,5 @@
+package com.bloodbank.serviceimpl;
+
+public class LoginService {
+
+}

@@ -1,0 +1,21 @@
+package com.bloodbank.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.bloodbank.model.BloodStorageBean;
+import com.bloodbank.model.DonorBean;
+import com.bloodbank.model.RequestBean;
+
+public interface LoginDao extends JpaRepository<RequestBean , Integer>{
+	
+	@Query("SELECT * FROM requests")
+	public RequestBean requestDisplay();
+	
+	@Query("SELECT * FROM donors")
+	public DonorBean donorDisplay();
+	
+	@Query("SELECT * FROM blood_storage")
+	public BloodStorageBean bloodStorageDisplay();
+
+}
